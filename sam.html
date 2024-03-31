@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your CV</title>
+<style> body {
+font-family: Arial, sans-serif; margin: 20px;
+text-align: center;
+}
+section {
+margin-bottom: 20px;
+}
+button {
+background-color: #4CAF50; color: white;
+padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+CODE
+<h1>samridhi srivastava</h1>
+<h1>2101920130150</h1>
+</header>
+<section>
+<h2>Education</h2>
+<p>AKTU University, B-Tech(IT), 2021-25</p>
+</section>
+<section>
+<h2>Work Experience</h2>
+<p>Intern, IBM, oct 2023- nov 2023</p>
+<ul>
+</ul>
+</section>
+<section>
+<h2>Skills</h2>
+<ul>
+<li>Java Programing</li>
+</ul>
+</section>
+<button onclick="toggleSection('additionalInfo')">Show Additional Information</button>
+<section id="additionalInfo" style="display: none;">
+<h2>Additional Information</h2>
+<p>Any other details you want to include.</p>
+</section>
+<p>Email: peehua9@gmail.com | Phone: +91-8755436535</p>
+<li>SWE</li>
+<li>Software Development</li>
+<li>Figma</li>
+<li>Artificial Intelligence</li>
+<script>
+function toggleSection(sectionId) {
+var section = document.getElementById(sectionId); if (section.style.display === 'none') { 
+section.style.display = 'block';
+}
+else {
+section.style.display = 'none';
+}
+}
+</script>
+</body>
+</html>

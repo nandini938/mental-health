@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<form id="subjectForm">
+    <label for="year">Select B.Tech Year:</label>
+    <select id="year" name="year">
+        <option value="first">First Year</option>
+        <option value="second">Second Year</option>
+        <option value="third">Third Year</option>
+        <option value="fourth">Fourth Year</option>
+    </select>
+
+    <div id="subjectContainer">
+        <label for="subjects">Select Subjects:</label>
+        <select id="subjects" name="subjects[]" multiple>
+            <!-- Add your subjects here -->
+            <option value="math">Mathematics</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+            <!-- Add more subjects as needed -->
+        </select>
+    </div>
+
+    <button type="button" onclick="redirectToPage()">Submit</button>
+</form>
+
+<script>
+    function redirectToPage() {
+        var year = document.getElementById("year").value;
+        var subjects = document.getElementById("subjects").value;
+
+        // Customize URLs based on selected year and subjects
+        var url = ""; // Add your base URL here
+
+        if (year === "first") {
+            url += "first_year_page.html";
+        } else if (year === "second") {
+            url += "second_year_page.html";
+        } else if (year === "third") {
+            url += "third_year_page.html";
+        } else if (year === "fourth") {
+            url += "fourth_year_page.html";
+        }
+
+        // Append selected subjects to the URL
+        if (subjects.length > 0) {
+            url += "?subjects=" + subjects.join(",");
+        }
+
+        // Redirect to the generated URL
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>
